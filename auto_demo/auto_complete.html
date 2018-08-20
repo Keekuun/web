@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            height: 500px;
+            border: 1px solid #fff;
+        }
+        .search{
+            width: 640px;
+            margin: 0 auto;
+            height: 36px;
+            background-color: #666666;
+            margin-top: 232px;
+        }
+        .search input[type=text]{
+            width: 528px;
+            height: 32px;
+            outline: none;
+            padding-left: 8px;
+        }
+        .search input[type=button]{
+            width: 100px;
+            height: 36px;
+            outline: none;
+            border: none;
+            color: #F0F8FF;
+            background-color: #317EF3;
+        }
+        .list ul{
+            width:540px ;
+            clear: both;
+            border-top: none;
+            border: 1px solid #A9A9A9;
+            display: none;
+            list-style: none;
+        }
+        .list ul li{
+            padding-top: 10px;
+            padding-left: 8px;
+        }
+        .list ul li:hover{
+            background-color: #CCC;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="search">
+        <div style="width: 540px; height: 32px; float: left;">
+            <input type="text" id="input">
+        </div>
+        <div style="width: 100px; height: 32px; float: left;">
+            <input type="button" value="百度一下">
+        </div>
+        <div class="list">
+            <ul id="ul">
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    //页面加载之后立即执行一段 JavaScript：
+    document.getElementById("input").onfocus = function(){
+        this.style.borderColor = "#3385ff";
+    }
+    //当用户离开输入字段时对其进行验证：
+    document.getElementById("input").onblur = function(){
+        this.style.borderColor = "initial";
+        ul.style.display = "none";
+    }
+    //当元素获得用户输入时运行的脚本
+    document.getElementById("input").oninput = function(){
+        selectKets();
+    }
+    document.getElementById("input").onpropertychange = function(){
+        selectKets();
+    }
+    //定义基本数据
+    var data = ["HTML", "HAPPY", "H5", "HelloWorld", "CSS", "CSS3", "CSGO", "CCTV", "C#", "C++", "APACHE", "ALI", "AIQIYI", "AK47", "周大福", "周冬雨", "周公解梦", "周扬青", "刘德华", "刘诗诗"];
+    var ul=document.getElementById("ul");
+
+    function selectKets(){
+        var value=document.getElementById("input").value;
+        if(value != ""){
+            ul.innerHTML = "";
+            for (var i=0;i<data.length;i++) {
+                if(data[i].indexOf(value.toUpperCase())==0){
+                    var li=document.createElement("li");
+                    li.innerHTML=data[i];
+                    ul.appendChild(li);
+                    ul.style.display="block";
+                }
+            }
+        }else{
+            ul.style.display="none";
+        }
+    }
+</script>
+</body>
+</html></html>

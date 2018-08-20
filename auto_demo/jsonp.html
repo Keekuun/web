@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>自动补全（Autocomplete Widget）演示</title>
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<p>
+    <input type="submit" onclick="XmlSendRequest();" />
+</p>
+
+<p>
+    <input type="submit" onclick="JqSendRequest();" />
+</p>
+<label for="autocomplete">选择一个编程语言：</label>
+<!--<input id="autocomplete" type="text" onclick="XmlSendRequest();">-->
+<input id="autocomplete" type="text" onclick="JqSendRequest();">
+
+<script>
+
+    function call(arg){
+        console.log(arg);
+        $( "#autocomplete" ).autocomplete({
+            source: arg
+        });
+    }
+    // function XmlSendRequest(){
+    //     // 创建script标签
+    //     var tag = document.createElement('script');
+    //     // 指定src
+    //     tag.src = "http://127.0.0.1:8000/auto/?callback=call";
+    //     // 添加到head标签中
+    //     document.head.appendChild(tag);
+    //     // 删除script标签
+    //     document.head.removeChild(tag);
+    //
+    // }
+
+    function JqSendRequest(){
+        $.ajax({
+            url: "http://127.0.0.1:8000/auto/?callback=call",
+            type: 'POST', // 内部POST-》GET  http://c2.com:8000/test/?n1=1&n2=4
+            data: {'n1':1},
+            dataType: 'JSONP',
+            jsonp: "callback",
+            jsonpCallback: 'call'
+        })
+    }
+</script>
+</body>
+</html>
