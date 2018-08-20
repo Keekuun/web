@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="./script.js"></script>
+</head>
+<!--<head>-->
+	<!--<meta charset="UTF-8">-->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+	<!--<title>Bootstrap</title>-->
+	<!--<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.0.0-beta.2/dist/css/bootstrap.css">-->
+	<!--<link rel="stylesheet" href="style.css">-->
+	<!--<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>-->
+	<!--<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>-->
+	<!--<script src="https://unpkg.com/bootstrap@4.0.0-beta.2/dist/js/bootstrap.js"></script>-->
+	<!--<script src="script.js"></script>-->
+<!--</head>-->
+<body>
+<!--.container响应式-->
+	<!--<div class="container demo">-->
+		<!--<div class="row ">-->
+			<!--<div class="col-4 order-3"><span>1</span></div>-->
+			<!--<div class="col-4 offset-1"><span>2</span></div>-->
+			<!--<div class="col-4 order-1"><span>3</span></div>-->
+		<!--</div>-->
+	<!--</div>-->
+<div class="component demo">
+	<div class="alert alert-primary alert-dismissable fade show" role="alert">
+		<h4>Alert组件</h4>
+		Hello~<a href="" class="alert-link">see more.</a>
+		<button class="close" data-dismiss="alert">
+			&times
+		</button>
+	</div>
+	<button class="btn btn-danger close-alert">Close</button>
+</div>
+
+<div>
+	<h3>hello~
+		<span class="badge badge-secondary badge-pill">new</span>
+	</h3>
+</div>
+<div>
+	<button class="btn btn-danger ">
+	<h3>hello~
+		<span class="badge badge-light badge-pill">new</span>
+	</h3>
+	</button>
+</div>
+
+<div>
+	<nav>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="">首页</a></li>
+			<li class="breadcrumb-item"><a href="">课程</a></li>
+			<li class="breadcrumb-item active">关于</li>
+		</ol>
+	</nav>
+</div>
+
+<hr/>
+<div>
+	<a href="" class="btn btn-primary">hello</a>
+</div><div>
+	<button href="" class="btn btn-danger btn-block">hello</button>
+	<button href="" class="btn btn-outline-danger btn-lg">hello</button>
+	<button href="" class="btn btn-danger btn-lg" disabled>hello</button>
+</div>
+<hr/>
+<div class="btn-group-vertical btn-group-sm">
+	<button class="btn btn-secondary">1</button>
+	<button class="btn btn-secondary">2</button>
+	<button class="btn btn-secondary">3</button>
+</div>
+<hr/>
+
+<div class="card text-center">
+	<div class="card-header">
+		<h4>card</h4>
+	</div>
+	<div class="card-body">
+		<h4 class="card-title">title</h4>
+		<p class="card-text">description...</p>
+		<a href="#" class="card-link">action</a>
+		<a href="#" class="card-link">action</a>
+	</div>
+	<div class="card-footer">footer</div>
+</div>
+
+<div class="card text-center text-white">
+	<img src="../images/f3.jpg" alt="" class="card-img">
+	<div class="card-img-overlay">
+		<h4 class="card-title">title</h4>
+		<p class="card-text">description...</p>
+		<a href="#" class="card-link">action</a>
+		<a href="#" class="card-link">action</a>
+	</div>
+</div>
+&nbsp;&nbsp;
+<div class="card-group">
+	<div class="card text-center text-white">
+		<img src="../images/f3.jpg" alt="" class="card-img">
+		<div class="card-img-overlay">
+			<h4 class="card-title">title</h4>
+			<p class="card-text">description...</p>
+		<div class="card-footer">
+			<a href="#" class="card-link">action</a>
+			<a href="#" class="card-link">action</a>
+		</div>
+		</div>
+	</div>
+	<div class="card text-center text-white">
+		<img src="../images/f3.jpg" alt="" class="card-img">
+		<div class="card-img-overlay">
+			<h4 class="card-title">title</h4>
+			<p class="card-text">description...</p>
+		<div class="card-footer">
+			<a href="#" class="card-link">action</a>
+			<a href="#" class="card-link">action</a>
+		</div>
+		</div>
+	</div>
+
+</div>
+
+&nbsp;&nbsp;
+</body>
+</html>

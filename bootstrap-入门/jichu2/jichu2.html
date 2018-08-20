@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="./script.js"></script>
+</head>
+<!--<head>-->
+	<!--<meta charset="UTF-8">-->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+	<!--<title>Bootstrap</title>-->
+	<!--<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.0.0-beta.2/dist/css/bootstrap.css">-->
+	<!--<link rel="stylesheet" href="style.css">-->
+	<!--<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>-->
+	<!--<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>-->
+	<!--<script src="https://unpkg.com/bootstrap@4.0.0-beta.2/dist/js/bootstrap.js"></script>-->
+	<!--<script src="./script.js"></script>-->
+<!--</head>-->
+<body>
+
+<div class="component demo">
+
+	<a href="#collapse-demo"
+		 class="btn btn-primary"
+		 data-toggle="collapse">action link</a>
+
+	<button data-target="#collapse-demo"
+		 class="btn btn-danger"
+		 data-toggle="collapse">action link</button>
+
+	<div class="collapse" id="collapse-demo">
+		<div class="card card-body">
+			hello~
+		</div>
+	</div>
+
+	<br/><br/>
+
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header">
+				<a href="#collapse-1" data-toggle="collapse">title</a>
+			</div>
+			<div class="collapse show" id="collapse-1" data-parent="#accordion">
+				<div class="card-body">hello~</div>
+			</div>
+		</div><div class="card">
+			<div class="card-header">
+				<a href="#collapse-2" data-toggle="collapse" data-parent="#accordion">title</a>
+			</div>
+			<div class="collapse" id="collapse-2">
+				<div class="card-body">hello~</div>
+			</div>
+		</div>
+
+		<br><br>
+		<div class="dropdown">
+			<button class="btn btn-outline-warning dropdown-toggle"
+							data-toggle="dropdown">Dropdown</button>
+			<a class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown">Dropdown</a>
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Web language</div>
+				<a href="" class="dropdown-item">Python</a>
+				<a href="" class="dropdown-item">Java</a>
+				<a href="" class="dropdown-item">C++</a>
+				<a href="" class="dropdown-item">Php</a>
+				<div class="dropdown-divider"></div>
+				<a href="" class="dropdown-item">More</a>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="btn-group">
+			<a href="#" class="btn btn-success">Dropdown</a>
+			<button class="btn btn-success dropdown-toggle dropdown-toggle-split"
+							data-toggle="dropdown"><span class="sr-only" >Toggle Dropdown</span></button>
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Web language</div>
+				<a href="" class="dropdown-item">Python</a>
+				<a href="" class="dropdown-item">Java</a>
+				<a href="" class="dropdown-item">C++</a>
+				<a href="" class="dropdown-item">Php</a>
+				<div class="dropdown-divider"></div>
+				<a href="" class="dropdown-item">More</a>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div id="dropdown-demo" class="btn-group dropup">
+			<a href="#" class="btn btn-success">Dropdown</a>
+			<button class="btn btn-success dropdown-toggle dropdown-toggle-split"
+							data-toggle="dropdown" data-offset="10"><span class="sr-only" >Toggle Dropdown</span></button>
+			<div class="dropdown-menu dropdown-menu-left">
+				<div class="dropdown-header">Web language</div>
+				<a href="" class="dropdown-item">Python</a>
+				<a href="" class="dropdown-item">Java</a>
+				<a href="" class="dropdown-item">C++</a>
+				<a href="" class="dropdown-item">Php</a>
+				<div class="dropdown-divider"></div>
+				<a href="" class="dropdown-item">More</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

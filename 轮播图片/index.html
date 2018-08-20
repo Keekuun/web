@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>秦时明月</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<!--只显示当前图片，其他的图片隐藏起来，当点击按钮的时候显示，或者自动轮播-->
+    <div id="moon" class="moon">
+        <!--图片容器-->
+        <!--<span class="prev"><img src="image/arrow1.png" alt="arrow" /></span>-->
+        <!--<span class="next"><img src="image/arrow2.png" alt="arrow" /></span>-->
+        <ul class="size">
+            <li><a href=""><img src="moonImage/空山鸟语.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/tianming.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/shaosiming.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/shaoyu.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/shilan.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/xingjun.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/baifeng.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/墨鸦.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/少羽.jpg" alt=""></a></li>
+            <li><a href=""><img src="moonImage/xinghun.jpg" alt="" ></a></li>
+            <li><a href=""><img src="moonImage/光剑.jpg" alt="" ></a></li>
+            <li><a href=""><img src="moonImage/龙且.jpg" alt="" ></a></li>
+        </ul>
+        <div id="bt"></div>
+    </div>
+</body>
+<script type="text/javascript">
+    // 默认显示第一张图片
+    $(document).ready(function(){
+        $('ul li:first-child').show();
+    // 获取图片数量,生成对应数量的按钮
+        img_amount = $('ul li').length;
+        for(i=1;i<=img_amount;i++){
+            $('#bt').append('<span>'+i+'</span>');
+        }
+        // 手动切换图片
+        current_img = 1;
+        $('#bt span').click(function(){
+            current_img = $(this).text();
+            // 将当前图片显示，其他隐藏
+            $('ul li').hide();
+            // eq索引从0开始
+            $('ul li').eq(current_img-1).show();
+            $('#bt span').removeClass('active');
+            $('#bt span').eq(current_img-1).addClass('active');
+        })
+        // 自动轮播
+        function auto() {
+            // 通过代码去触发点击的事件
+            $('#bt span').eq(current_img-1).trigger('click');
+            if(current_img == img_amount){
+                current_img = 1;
+            }else{
+                current_img++;
+            }
+        }
+        // 定时器
+        start = setInterval(auto,2000);
+
+        // 鼠标在图片上的时候暂停轮播
+        $('ul li').mouseover(function (){
+            clearInterval(start);
+        }).mouseout(function () {
+            start = setInterval(auto,2000);
+        })
+    })
+</script>
+</html>

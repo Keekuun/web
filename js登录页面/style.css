@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+}
+.fl{
+    float: left;
+}
+.cl{
+    clear: both;
+}
+a{
+    color: #fff934;
+    text-decoration: none;
+}
+/*****tologin*****/
+.main{
+    margin: 0 auto;
+    width: 766px;
+    height: 555px;
+    background: url("images/bgcolor.PNG") no-repeat;
+}
+.main a{
+    color: #fff;
+    border: outset 5px greenyellow;
+}
+.main a:hover{
+    color:red;
+}
+.click{
+    position: fixed;
+    top:40%;
+    left: 45%;
+}
+/*****login*****/
+.login{
+    margin: 0 auto;
+    width: 666px;
+    height: 666px;
+    background: url("images/login.jpg");
+}
+.x{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+.admin_img,.password_img{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+}
+.username,.password{
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 150px;
+    line-height: 150px;
+
+}
+#username,#password{
+    line-height: 35px;
+    font-size: 20px;
+    background-color: #ededff;
+    border: inset 5px greenyellow;
+    text-indent: 10px;
+}
+.submit,.reset{
+    line-height: 35px;
+    border: outset 5px #EB8C11;
+    margin-top: 50px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+ul{
+    color: white;
+    padding: 0;
+    list-style: none;
+}
+li{
+    margin-top: 50px;
+    margin-left: 50px;
+}

@@ -1,0 +1,17 @@
+.component.demo {
+    /*background: #054bd1;*/
+    padding: 20px;
+    height: 100vh;
+    width: 50%;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+.carousel.demo .carousel-item{
+    height: 300px;
+}
+.carousel.demo .carousel-item img{
+    min-height: 300px;
+    max-height: 500px;
+    object-fit: cover;
+}

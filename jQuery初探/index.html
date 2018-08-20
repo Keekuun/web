@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <style type="text/css">
+        body{text-align: center;}
+        *{margin: 0px; padding: 0px; cursor: pointer;}
+        li{list-style: none; clear: both;}
+        div{margin: 0px auto; width: 100%; clear: both; text-align: center;}
+        span{width: 200px; height: 40px; display: block; border: 1px solid #000000; float: left; text-align: center; vertical-align: middle;}
+        .jingshan{background-color: red;}
+    </style>
+</head>
+<body>
+<h1>这里是目标区域</h1>
+<div>
+    <ul>
+        <li id="li_1"><span class="class1">class1</span><span class="class1">class1</span><span class="class1">class1</span></li>
+        <li id="li_2"><span class="class2">class2</span><span class="class2">class2</span><span class="class2">class2</span></li>
+        <li id="li_3"><span id="ID1">ID1</span><span id="ID2">ID2</span><span id="ID3">ID3</span></li>
+        <li id="li_4"><span>normal</span><span>normal</span><span>normal</span></li>
+        <li id="li_5"><span><a href="http://www.baidu.com">美女</a></span><span>帅哥</span><span>人妖</span></li>
+    </ul>
+</div>
+<br/><br/><br/><br/>
+<div>
+    <input type="text" name="in_1" value="in_val_1"/>
+    <input type="text" name="in_2" value="in_val_2"/>
+    <input type="text" name="on_3" value="in_val_3"/>
+    <input type="text" name="on_4" value="in_val_4"/>
+</div>
+<br/><br/><br/><br/>
+<div>
+    <h2>这里是操作按钮区域</h2>
+    <span id="sp1">ID1选择器</span>
+    <span id="sp2">ID2选择器</span>
+    <span id="sp3">ID3选择器</span>
+    <span id="sp4">class1选择器</span>
+    <span id="sp5">class2选择器</span>
+    <span id="sp6">span 元素选择</span>
+    <span id="sp7">ID1,ID2,ID3并列选择器</span>
+    <span id="sp8">class1,class2并列选择器</span>
+    <span id="sp9">ID1,class2选择器</span>
+    <span id="sp10">ul span 家族选择器</span>
+    <span id="sp11">li#li_1>span 父子选择器</span>
+    <span id="sp12">ID1+span 紧邻的元素</span>
+    <span id="sp13">ID1~span 相同辈分的元素</span>
+    <span id="sp14">class1 奇数选择器</span>
+    <span id="sp15">class1 偶数选择器</span>
+    <span id="sp16">span has(a)选择</span>
+    <span id="sp17">input[name='in_1']</span>
+    <span id="sp18">input[name!='in_1']</span>
+    <span id="sp19">input[name$='in']</span>
+    <span id="sp20">input[name*='_2']</span>
+</div>
+
+</body>
+<script>
+    $(function(){
+        // ID选择器
+        $('#sp1').click(function(){
+            $('#ID1').toggleClass('jingshan')
+        });
+        $('#sp2').click(function(){
+            $('#ID2').toggleClass('jingshan')
+        });
+        $('#sp3').click(function(){
+            $('#ID3').toggleClass('jingshan')
+        });
+        // class 选择器
+        $('#sp4').click(function(){
+            $('.class1').toggleClass('jingshan')
+        });
+        $('#sp5').click(function(){
+            $('.class2').toggleClass('jingshan')
+        });
+        // 元素选择
+        $('#sp6').click(function(){
+            $('span').toggleClass('jingshan')
+        });
+        // 综合
+        $('#sp7').click(function(){
+            $('#ID1,#ID2,#ID3').toggleClass('jingshan')
+        });
+        $('#sp8').click(function(){
+            $('.class1,.class2').toggleClass('jingshan')
+        });
+        $('#sp9').click(function(){
+            $('#ID1,.class2').toggleClass('jingshan')
+        });
+        $('#sp10').click(function(){
+            $('ul span').toggleClass('jingshan')
+        });
+        $('#sp11').click(function(){
+            $('#li_1>span').toggleClass('jingshan')
+        });
+        $('#sp12').click(function(){
+            $('#ID1+span').toggleClass('jingshan')
+        });
+        $('#sp13').click(function(){
+            $('#ID1~span').toggleClass('jingshan')
+        });
+        $('#sp14').click(function(){
+            $('.class1:odd').toggleClass('jingshan')
+        });
+        $('#sp15').click(function(){
+            $('.class1:even').toggleClass('jingshan')
+        });
+        $('#sp16').click(function(){
+            $("#li_5 span:has(a)").toggleClass('jingshan')
+        });
+        $('#sp17').click(function(){
+            $("input[name='in_1']").toggleClass('jingshan')
+        });
+        $('#sp18').click(function(){
+            $("input[name!='in_1']").toggleClass('jingshan')
+        });
+        $('#sp19').click(function(){
+            $("input[name$='_3']").toggleClass('jingshan')
+        });
+        $('#sp20').click(function(){
+            $("input[name*='n_']").toggleClass('jingshan')
+        });
+    })
+</script>
+</html>

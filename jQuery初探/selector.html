@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <style>
+        body{
+            text-align: center;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        li{
+            margin: 0 auto;
+            list-style: none;
+            clear: both;
+        }
+        div{
+            margin: 0 auto;
+            clear: both;
+            text-align: center;
+            width: 100%;
+        }
+        span{
+            width:300px;
+            height: 50px;
+            border: solid 1px ;
+            display: block;
+            float: left;
+            text-align: center;
+        }
+        .zkk{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>这里是目标区域</h1>
+    <ul>
+        <li id="li_1"><span class="sp1 class2">class_1 class2选择器</span><span class="sp2">class_1选择器</span><span class="sp3">class_1选择器</span></li>
+        <li id="li_2"><span class="class2">class_2选择器</span><span class="class2">class_2选择器</span><span class="class2">class_2选择器</span></li>
+        <li id="li_3"><span class="sp1">id_1选择器</span><span class="sp2">id_2选择器</span><span class="sp3">id_3选择器</span></li>
+        <li id="li_4"><span class="sp1">id_2选择器</span><span class="sp2">id_2选择器</span><span class="sp3">id_2选择器</span></li>
+        <li id="li_5"><span class="sp1">id_1选择器</span><span class="sp2">id_2选择器</span><span class="sp3">id_3选择器</span></li>
+    </ul>
+    <div><br/><br/></div>
+    <h1>这里是操作按钮区</h1>
+    <span id="sp_1">li_1隐藏</span>
+    <span id="sp_2">id=sp_2</span>
+    <span id="sp_3">class2选择器</span>
+    <span id="sp_4">li_1出现</span>
+</body>
+<script>
+    //以下两种方法一样
+    $(function()//简写
+    {
+        $('#sp_1').click(function(){
+            $('#li_1').hide();
+        });
+
+        //alert("it works!");
+    });
+    $(function(){
+        $('#sp_2').mouseenter(function(){
+            alert('你的鼠标已到了id=sp_2的元素上');
+        });
+    });
+    $(function(){
+        $('#sp_3').click(function(){
+           $('.class2').toggleClass('zkk');
+        });
+    });
+    $(function()//简写
+    {
+        $('#sp_4').click(function(){
+            $('#li_1').show();
+        });
+    // $(document).ready(function(){//防止文档在完全加载之前运行jquery代码，
+    //                                 // 即在DOM加载完成之后才可以对DOM进行操作，否则可能会失败
+    //     //开始写jquery代码
+    //
+    })
+</script>
+</html>
