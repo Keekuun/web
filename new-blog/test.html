@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<!--width=device-width 表示宽度是设备屏幕的宽度。-->
+	<!--initial-scale=1 表示初始的缩放比例。-->
+	<!--shrink-to-fit=no 自动适应手机屏幕的宽度。-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--IE兼容模式-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bootstrap</title>
+	<!-- Bootstrap 核心 CSS 文件 -->
+	<link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<!--Font Awesome是一个方便的图标库-->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<!--自定义的js-->
+	<script src="./js/main.js"></script>
+</head>
+
+<div class="navbar navbar-fixed-top navbar-expand-sm nav-pills mynav">
+	<a href="#" class="navbar-brand">keekuun</a>
+	<button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content">
+		<span><i class="fa fa-align-justify" style="font-size:48px;color:black"></i></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbar-content">
+		<ul class="nav nav-pills mynav" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="pill" href="#main">主页</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="pill" href="#article">文章</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="pill" href="#manage">管理</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Link 1</a>
+					<a class="dropdown-item" href="#">Link 2</a>
+					<a class="dropdown-item" href="#">Link 3</a></div>
+			</li>
+		</ul>
+	</div>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div id="main" class="container tab-pane active"><br>
+				<h3>HOME</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div id="article" class="container tab-pane fade"><br>
+				<h3>Menu 1</h3>
+				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div id="manage" class="container tab-pane fade"><br>
+				<h3>Menu 2</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			</div>
+		</div>
+</div>
+
+
+</body>
+</html>
